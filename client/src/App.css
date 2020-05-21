@@ -1,0 +1,39 @@
+.App {
+  text-align: center;
+  color: #aca18c
+  
+}
+
+* {
+  color: #aca18c;
+  font-family: "Montserrat Light" sans-serif;
+  font-weight: 800;
+}
+
+h1 {
+  font-family: "Montserrat Classic" sans-serif;
+  font-weight: 900;
+}
+
+[class^= "nav"] {
+  color: #aca18c;
+}
+
+.btn {
+  background-color: rgb(196, 138, 148);
+  color: white;
+  font-family: "Montserrat Classic" sans-serif;
+  font-weight: 900;
+}
+
+input {
+  border-radius: 5px;
+}
+
+
+
+  
+
+
+
+
