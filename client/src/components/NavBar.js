@@ -2,6 +2,8 @@ import React from 'react';
 import { Router } from "@reach/router";
 import { Link } from '@reach/router';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTint } from '@fortawesome/free-solid-svg-icons'
 
 
 const NavBar = () => {
@@ -25,13 +27,24 @@ const NavBar = () => {
                     <li className="nav-item">
                     <Link to={`/task/add`} className="nav-link" style={style} >Add a Task</Link>
                     </li>
-                    <li className="nav-item">
+                    <li className="nav-item my-2 my-lg-0">
                     <a className="nav-link" href="#" style={style} >Today's Tasks</a>
                     </li>
                     <li className="nav-item">
                     <a className="nav-link disabled" href="#" style={style} >Finished Tasks</a>
                     </li>
                 </ul>
+                
+                    <span className = "navbar-text">
+                        <FontAwesomeIcon icon={faTint} className= "drop"/>
+                        <FontAwesomeIcon icon={faTint} className= "drop" />
+                        <FontAwesomeIcon icon={faTint} className= "drop"/>
+                        <FontAwesomeIcon icon={faTint} className= "drop"/>
+                        <FontAwesomeIcon icon={faTint} className= "drop"/>
+                        <FontAwesomeIcon icon={faTint} className= "drop"/>
+                        <FontAwesomeIcon icon={faTint} className= "drop"/>
+                        <FontAwesomeIcon icon={faTint} className= "drop"/>
+                    </span>
                 </div>
             </nav>
 

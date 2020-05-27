@@ -5,6 +5,8 @@ import { Link } from '@reach/router';
 import NavBar from '../components/NavBar';
 
 import desk from "../images/desk.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 
 
@@ -36,6 +38,7 @@ const Main = (props) => {
     return(
         <div>
             <NavBar />
+            
             <div>
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
@@ -51,14 +54,6 @@ const Main = (props) => {
                 </div>
             </div>
             </div>
-
-            {
-                tasks.map((t, idx) => {
-                    return  <div key={idx}>
-                                <Link to={`/task/${t._id}`}>{t.title}</Link><br></br>
-                            </div>
-                })
-            }
 
         </div>
         

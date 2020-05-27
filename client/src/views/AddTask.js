@@ -4,6 +4,7 @@ import Axios from 'axios';
 import { Link } from '@reach/router';
 import TaskForm from '../components/TaskForm';
 import NavBar from '../components/NavBar';
+import desktop from '../images/desktop.png';
 
 
 const AddTask = (props) => {
@@ -59,16 +60,25 @@ const AddTask = (props) => {
     return(
         <div>
             <NavBar />
-            <div className="form">
-            <h1>ADD A TASK:</h1>
-                <TaskForm
-                    form={newTask}
-                    handleChange={handleChange}
-                    handleSubmit={handleSubmit}
-                    errors={errors}
-                />
+                    <div class="carousel-item active">
+                        <img src={desktop} class="d-block w-100" alt="..."></img>
+                    </div>
+            <br></br>
+            <div className="card" style= {{ width: "26rem", margin: "auto" }} >
+                <div className="card-header">
+                    ADD A TASK:
+                </div>
+                    <div className= "card-body">
+                    <TaskForm
+                        form={newTask}
+                        handleChange={handleChange}
+                        handleSubmit={handleSubmit}
+                        errors={errors}
+                    />
+                    </div>
+                </div>
             </div>
-        </div>
+        
     );
 }
 export default AddTask;

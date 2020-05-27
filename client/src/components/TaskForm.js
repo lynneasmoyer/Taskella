@@ -6,7 +6,7 @@ const TaskForm = ({handleChange, handleSubmit, form, errors}) => {
 
         return(
             <div >
-            <form  className= "col-3 mx-auto" onSubmit={(e) => handleSubmit(e)}>
+            <form  className= "form" onSubmit={(e) => handleSubmit(e)}>
                 <Input
                     type="text"
                     name="title"
