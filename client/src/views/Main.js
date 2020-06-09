@@ -1,37 +1,12 @@
-import React, { useEffect, useState } from 'react';
-
-import Axios from 'axios';
-import { Link } from '@reach/router';
+import React from 'react';
 import NavBar from '../components/NavBar';
-
 import desk from "../images/desk.png";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 
 
 
 const Main = (props) => {
-    const [newTask, setNewTask] = useState({
-        title: "",
-        duedate: "",
-        description: ""
-    })
-
-    const [errors, setErrors] = useState({
-        title: "",
-        duedate: "",
-        description: ""
-    })
-
-    const [isSubmitted, setIsSubmitted] = useState(false);
-    const [tasks, setTasks] = useState([]);
-
-    useEffect(() => {
-        Axios.get('http://localhost:8000/api/tasks')
-            .then(res => {
-                setTasks(res.data)
-            });
-    }, [isSubmitted]);
 
 
 

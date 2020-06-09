@@ -5,7 +5,7 @@ import { Link } from '@reach/router';
 import NavBar from '../components/NavBar';
 
 
-// import Moment from 'react-moment';
+
 
 
 
@@ -13,19 +13,11 @@ import NavBar from '../components/NavBar';
 
 
 const Dashboard = (props) => {
-    const [newTask, setNewTask] = useState({
-        title: "",
-        duedate: "",
-        description: ""
-    })
 
-    const [errors, setErrors] = useState({
-        title: "",
-        duedate: "",
-        description: ""
-    })
 
-    const [isSubmitted, setIsSubmitted] = useState(false);
+
+
+    const [isSubmitted] = useState(false);
     const [tasks, setTasks] = useState([]);
 
     useEffect(() => {
@@ -48,7 +40,6 @@ const Dashboard = (props) => {
     }
 
 
-    var dateFormat = require('dateformat');
 
     return(
         <div>
@@ -63,23 +54,28 @@ const Dashboard = (props) => {
                         To-Do
                         </div>
                         <div class="row">
-            <div className = "card" >
+            
             {
                 tasks.map((t, idx) => {
-                    return  <div key={idx}>
+                    return  <div key={idx} className = "card" >
                                 <div className= "card-header"> 
-                                <Link to={`/task/${t._id}`}>{t.title}</Link><br></br>
                                 Do by: {
                                 formatDate(t.duedate)
                                 }
-                                
+                                <br></br>
+                                <Link to={`/task/${t._id}`}>{t.title}</Link>
                                 </div>
                                 <div className="card-body"> {t.description}</div>
-                                <button className="btn btn-light btn-lg active" onClick={(e) => removeTask(e,idx)}>Delete task</button>
-                            </div>
+                                <button className="btn btn-light btn-sm active" onClick={(e) => removeTask(e,idx)}>Delete task</button>
+                                
+                                </div>
+                            
+                            
                 })
             }
-            </div>
+            
+            
+        
             </div>
 
                         <div class="col-sm">

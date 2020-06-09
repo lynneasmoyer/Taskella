@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTint } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
@@ -11,12 +11,12 @@ function WaterTracker() {
       
       const [waterDrops, setWaterDrops] = [[1,2,3,4,5,6,7,8], useState([])];
     
-      const handleChange = (e) => {
-        setWater({
-          ...drinkWater,
-          [e.target.name]:e.target.value
-        })
-      }
+      // const handleChange = (e) => {
+      //   setWater({
+      //     ...drinkWater,
+      //     [e.target.name]:e.target.value
+      //   })
+      // }
 
 
         let drop = {

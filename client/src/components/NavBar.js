@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router } from "@reach/router";
+
 import { Link } from '@reach/router';
 import WaterTracker from '../components/WaterTracker';
 
@@ -37,7 +37,7 @@ const NavBar = () => {
                     <a className="nav-link" href="/today" style={style} >Today's Tasks</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link disabled" href="#" style={style} >Finished Tasks</a>
+                    <a className="nav-link disabled" href="/finished" style={style} >Finished Tasks</a>
                     </li>
                 </ul>
                 <span>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import Axios from 'axios';
-import { Link } from '@reach/router';
+
 import TaskForm from '../components/TaskForm';
 import NavBar from '../components/NavBar';
 import desktop from '../images/desktop.png';

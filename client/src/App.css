@@ -31,9 +31,10 @@ input {
 }
 
 .card {
-  margin-top: 40px;
+  margin: 20px;
   width: 300px;
   display: inline-block;
+  padding: 5px;
 }
 
 #drop {
