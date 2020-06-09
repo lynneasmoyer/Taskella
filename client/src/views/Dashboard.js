@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
 import { Link } from '@reach/router';
 import NavBar from '../components/NavBar';
-import Moment from 'react-moment';
 
 
+// import Moment from 'react-moment';
 
 
 
@@ -42,16 +42,18 @@ const Dashboard = (props) => {
         ].concat(tasks.slice(idx+1)));
       }
 
-    // function formatDate(string){
-    //     var options = { year: 'numeric', month: 'long', day: 'numeric' };
-    //     return new Date(string).toLocaleDateString([],options);
-    // }
+    function formatDate(string){
+        var options = { year: 'numeric', month: 'long', day: 'numeric' };
+        return new Date(string).toLocaleDateString([],options);
+    }
 
+
+    var dateFormat = require('dateformat');
 
     return(
         <div>
             <NavBar />
-            <div  >
+            <div>
             <h1>MY TASKS:</h1>
 
             
@@ -67,7 +69,9 @@ const Dashboard = (props) => {
                     return  <div key={idx}>
                                 <div className= "card-header"> 
                                 <Link to={`/task/${t._id}`}>{t.title}</Link><br></br>
-                                {t.duedate}
+                                Do by: {
+                                formatDate(t.duedate)
+                                }
                                 
                                 </div>
                                 <div className="card-body"> {t.description}</div>

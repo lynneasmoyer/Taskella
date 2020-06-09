@@ -1,23 +1,23 @@
 .App {
   text-align: center;
-  color: #aca18c
+  color: '#aca18c'
   
 }
 
 * {
-  color: #aca18c;
+
   font-family: "Montserrat Light" sans-serif;
   font-weight: 750;
+  color: '#aca18c'
 }
 
 h1 {
   font-family: "Montserrat Classic" sans-serif;
   font-weight: 900;
+  color: '#aca18c'
 }
 
-[class^= "nav"] {
-  color: #aca18c;
-}
+
 
 .btn {
   background-color: rgb(196, 138, 148);
@@ -36,10 +36,17 @@ input {
   display: inline-block;
 }
 
-
-.drop {
-  margin: 4px;
+#drop {
+  color: lightblue;
 }
+
+#drop-complete {
+  color: darkblue;
+
+}
+
+
+
 
 
 

@@ -1,9 +1,11 @@
 import React from 'react';
 import { Router } from "@reach/router";
 import { Link } from '@reach/router';
+import WaterTracker from '../components/WaterTracker';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTint } from '@fortawesome/free-solid-svg-icons'
+
+
+
 
 
 const NavBar = () => {
@@ -11,15 +13,19 @@ const NavBar = () => {
     const style = {
         color: '#aca18c'
     }
+
+
+
+
     return (
         <div >
-            <nav className="navbar navbar-expand-lg navbar-light bg-light" style={style}>
+            <nav className="navbar navbar-expand-lg navbar-light bg-light" >
                 <a className="navbar-brand" href="/"  style={style} >TASKELLA</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav" style={style} >
+                <ul className="navbar-nav" >
                     <li className="nav-item active">
                     <Link  className="nav-link" to="/tasks" style={style} >Dashboard<span className="sr-only">(current)</span></Link> 
                     
@@ -28,27 +34,24 @@ const NavBar = () => {
                     <Link to={`/task/add`} className="nav-link" style={style} >Add a Task</Link>
                     </li>
                     <li className="nav-item my-2 my-lg-0">
-                    <a className="nav-link" href="#" style={style} >Today's Tasks</a>
+                    <a className="nav-link" href="/today" style={style} >Today's Tasks</a>
                     </li>
                     <li className="nav-item">
                     <a className="nav-link disabled" href="#" style={style} >Finished Tasks</a>
                     </li>
                 </ul>
+                <span>
+                < WaterTracker
+
+                />
+                </span>
                 
-                    <span className = "navbar-text">
-                        <FontAwesomeIcon icon={faTint} className= "drop"/>
-                        <FontAwesomeIcon icon={faTint} className= "drop" />
-                        <FontAwesomeIcon icon={faTint} className= "drop"/>
-                        <FontAwesomeIcon icon={faTint} className= "drop"/>
-                        <FontAwesomeIcon icon={faTint} className= "drop"/>
-                        <FontAwesomeIcon icon={faTint} className= "drop"/>
-                        <FontAwesomeIcon icon={faTint} className= "drop"/>
-                        <FontAwesomeIcon icon={faTint} className= "drop"/>
-                    </span>
+
                 </div>
             </nav>
 
         </div>
+        
     )
 }
 export default NavBar;
